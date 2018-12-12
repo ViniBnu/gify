@@ -1,12 +1,9 @@
 package com.gify.gify.controller;
 
-import com.gify.gify.model.Gify;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 @RestController
 public class HelloController {
@@ -16,8 +13,8 @@ public class HelloController {
         return "ola";
     }
 
-    @RequestMapping("/gifys")
-    public List<Gify> all() {
-        return new ArrayList<>(Arrays.asList(new Gify("gatinho"), new Gify("gatinho2")));
+    @PostMapping("/gify")
+    public String addGify() {
+        return "whatever";
     }
 }
